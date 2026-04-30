@@ -1,0 +1,41 @@
+extends:
+  - spectral:oas
+rules:
+  debian-info-license:
+    description: API info should declare the license used for served content.
+    given: $.info
+    severity: warn
+    then:
+      field: license
+      function: truthy
+  debian-sources-base-url:
+    description: Servers should reference sources.debian.org.
+    given: $.servers[*].url
+    severity: warn
+    then:
+      function: pattern
+      functionOptions:
+        match: "sources\\.debian\\.org"
+  debian-list-resource:
+    description: API should expose /list as a primary path for package discovery.
+    given: $.paths
+    severity: warn
+    then:
+      function: pattern
+      functionOptions:
+        match: "/list"
+  debian-ping-resource:
+    description: API should expose /ping/ for health checks.
+    given: $.paths
+    severity: warn
+    then:
+      function: pattern
+      functionOptions:
+        match: "/ping"
+  debian-operation-tags:
+    description: Operations should be tagged Sources, Copyright, or Patches.
+    given: $.paths[*][*]
+    severity: warn
+    then:
+      field: tags
+      function: truthy

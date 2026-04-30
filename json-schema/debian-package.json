@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api-evangelist.github.io/debian/json-schema/debian-package.json",
+  "title": "Debian Source Package",
+  "description": "A Debian source package with name, version, and metadata.",
+  "type": "object",
+  "properties": {
+    "package": {"type": "string"},
+    "version": {"type": "string"},
+    "suites": {"type": "array", "items": {"type": "string"}},
+    "maintainer": {"type": "string"},
+    "uploaders": {"type": "array", "items": {"type": "string"}},
+    "section": {"type": "string"},
+    "priority": {"type": "string"},
+    "homepage": {"type": "string", "format": "uri"},
+    "vcs_browser": {"type": "string", "format": "uri"},
+    "vcs_git": {"type": "string"}
+  },
+  "required": ["package", "version"]
+}

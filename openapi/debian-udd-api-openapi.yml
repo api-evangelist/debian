@@ -1,0 +1,42 @@
+openapi: 3.1.0
+info:
+  title: Debian Ultimate Database (UDD) Web Tools
+  description: >-
+    The Ultimate Debian Database (UDD) gathers Debian package, bug,
+    Lintian, popcon, and reproducibility data into a single SQL database.
+    UDD exposes web tools and JSON exports (such as the bugs-search and
+    maintainer dashboards) at udd.debian.org rather than a single
+    formal REST API.
+  version: "1.0"
+servers:
+  - url: https://udd.debian.org
+    description: UDD web tools
+tags:
+  - name: Bugs
+  - name: Maintainers
+  - name: Reproducibility
+paths:
+  /bugs/:
+    get:
+      summary: Search Debian bugs (UDD)
+      operationId: searchBugs
+      tags: [Bugs]
+      responses:
+        "200":
+          description: Multi-criteria search across Debian bug data.
+  /dmd/:
+    get:
+      summary: Maintainer dashboard
+      operationId: getMaintainerDashboard
+      tags: [Maintainers]
+      responses:
+        "200":
+          description: Dashboard data for a maintainer or team.
+  /reproducible/:
+    get:
+      summary: Reproducibility dashboard
+      operationId: getReproducibility
+      tags: [Reproducibility]
+      responses:
+        "200":
+          description: Build reproducibility status for Debian packages.

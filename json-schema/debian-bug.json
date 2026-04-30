@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api-evangelist.github.io/debian/json-schema/debian-bug.json",
+  "title": "Debian Bug Report",
+  "description": "A bug record from the Debian Bug Tracking System (BTS).",
+  "type": "object",
+  "properties": {
+    "id": {"type": "integer"},
+    "package": {"type": "string"},
+    "subject": {"type": "string"},
+    "submitter": {"type": "string"},
+    "severity": {"type": "string", "enum": ["critical", "grave", "serious", "important", "normal", "minor", "wishlist"]},
+    "status": {"type": "string"},
+    "tags": {"type": "array", "items": {"type": "string"}},
+    "date": {"type": "string", "format": "date-time"},
+    "last_modified": {"type": "string", "format": "date-time"},
+    "done": {"type": "string"},
+    "owner": {"type": "string"}
+  },
+  "required": ["id", "package", "subject"]
+}

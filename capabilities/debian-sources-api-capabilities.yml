@@ -1,0 +1,59 @@
+name: Debian Sources API Capabilities
+description: >-
+  Capabilities exposed by sources.debian.org for accessing source code,
+  copyright, and patch information across Debian packages.
+capabilities:
+  - name: Search Sources
+    description: Full-text search across the Debian source corpus.
+    operationId: searchSources
+    method: GET
+    path: /search/{query}
+  - name: List Packages
+    description: List every source package known to sources.debian.org.
+    operationId: listPackages
+    method: GET
+    path: /list
+  - name: List Packages By Prefix
+    description: List source packages whose names begin with a given prefix.
+    operationId: listPackagesByPrefix
+    method: GET
+    path: /prefix/{prefix}
+  - name: Get Package Info
+    description: Retrieve metadata for a specific package and version.
+    operationId: getPackageInfo
+    method: GET
+    path: /info/package/{package}/{version}
+  - name: Browse Source Tree
+    description: Navigate the source tree of a package version.
+    operationId: getSourcePath
+    method: GET
+    path: /src/{package}/{version}/{path}
+  - name: Search By File Checksum
+    description: Find files across Debian by SHA-256 checksum.
+    operationId: searchBySha256
+    method: GET
+    path: /sha256/
+  - name: Search By Tag
+    description: Look up source-tree entries by ctag.
+    operationId: searchByCtag
+    method: GET
+    path: /ctag/
+  - name: Get Copyright By File
+    description: Retrieve copyright records for a specific file path.
+    operationId: copyrightByFile
+    method: GET
+    path: /copyright/api/file/{package}/{version}/{path}
+  - name: List Patches
+    description: List Debian-applied patches for a package version.
+    operationId: listPatches
+    method: GET
+    path: /patches/api/{package}/{version}
+use_cases:
+  - name: License compliance
+    description: Audit licenses of source files shipped in Debian using copyright endpoints.
+  - name: Security research
+    description: Find code matching a known SHA-256 or ctag across all of Debian.
+  - name: Package discovery
+    description: Programmatically enumerate Debian source packages for downstream tools.
+  - name: Patch tracking
+    description: Track Debian-specific patches relative to upstream releases.

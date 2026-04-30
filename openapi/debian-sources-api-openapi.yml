@@ -1,0 +1,185 @@
+openapi: 3.1.0
+info:
+  title: Debian Sources API
+  description: >-
+    The Debian Sources API at sources.debian.org provides programmatic
+    access to source code, metadata, copyright, and patch information for
+    every package in Debian. All endpoints return JSON.
+  version: "1.0"
+  license:
+    name: AGPL-3.0
+    url: https://www.gnu.org/licenses/agpl-3.0.html
+servers:
+  - url: https://sources.debian.org/api
+    description: Debian Sources API
+tags:
+  - name: Sources
+  - name: Copyright
+  - name: Patches
+paths:
+  /search/{query}:
+    get:
+      summary: Search source code
+      operationId: searchSources
+      tags: [Sources]
+      parameters:
+        - in: path
+          name: query
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Search results across Debian source packages.
+  /list:
+    get:
+      summary: List all packages
+      operationId: listPackages
+      tags: [Sources]
+      responses:
+        "200":
+          description: A list of all source packages.
+  /prefix/{prefix}:
+    get:
+      summary: List packages by prefix
+      operationId: listPackagesByPrefix
+      tags: [Sources]
+      parameters:
+        - in: path
+          name: prefix
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Packages whose name begins with the given prefix.
+  /info/package/{package}/{version}:
+    get:
+      summary: Get package info
+      operationId: getPackageInfo
+      tags: [Sources]
+      parameters:
+        - in: path
+          name: package
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: version
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Metadata for a specific package version.
+  /src/{package}/{version}/{path}:
+    get:
+      summary: Browse source tree
+      operationId: getSourcePath
+      tags: [Sources]
+      parameters:
+        - in: path
+          name: package
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: version
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Source-tree entry (file or directory listing).
+  /sha256/:
+    get:
+      summary: Search by file checksum
+      operationId: searchBySha256
+      tags: [Sources]
+      parameters:
+        - in: query
+          name: checksum
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Files matching the SHA-256 checksum.
+  /ctag/:
+    get:
+      summary: Search by ctag
+      operationId: searchByCtag
+      tags: [Sources]
+      parameters:
+        - in: query
+          name: ctag
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Source-tree entries matching the tag.
+  /ping/:
+    get:
+      summary: Health check
+      operationId: ping
+      tags: [Sources]
+      responses:
+        "200":
+          description: OK
+  /copyright/api/sha256/:
+    get:
+      summary: Look up copyright for a file checksum
+      operationId: copyrightBySha256
+      tags: [Copyright]
+      responses:
+        "200":
+          description: Copyright record for a file.
+  /copyright/api/file/{package}/{version}/{path}:
+    get:
+      summary: Get copyright for a file path
+      operationId: copyrightByFile
+      tags: [Copyright]
+      parameters:
+        - in: path
+          name: package
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: version
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Copyright record.
+  /patches/api/{package}/{version}:
+    get:
+      summary: List Debian patches for a package
+      operationId: listPatches
+      tags: [Patches]
+      parameters:
+        - in: path
+          name: package
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: version
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Patches applied by Debian to upstream sources.

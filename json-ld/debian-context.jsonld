@@ -1,0 +1,23 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://schema.debian.org/",
+    "schema": "https://schema.org/",
+    "debian": "https://schema.debian.org/",
+    "Package": "schema:SoftwareApplication",
+    "Bug": "debian:Bug",
+    "Maintainer": "schema:Person",
+    "package": {"@id": "schema:name", "@type": "schema:Text"},
+    "version": {"@id": "schema:softwareVersion", "@type": "schema:Text"},
+    "maintainer": {"@id": "schema:maintainer"},
+    "section": {"@id": "schema:applicationCategory", "@type": "schema:Text"},
+    "priority": {"@id": "debian:priority", "@type": "schema:Text"},
+    "homepage": {"@id": "schema:url", "@type": "schema:URL"},
+    "id": {"@id": "schema:identifier"},
+    "subject": {"@id": "schema:name", "@type": "schema:Text"},
+    "severity": {"@id": "debian:severity", "@type": "schema:Text"},
+    "status": {"@id": "debian:status", "@type": "schema:Text"},
+    "submitter": {"@id": "schema:author"},
+    "date": {"@id": "schema:dateCreated", "@type": "schema:DateTime"}
+  }
+}

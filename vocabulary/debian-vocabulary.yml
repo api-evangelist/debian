@@ -1,0 +1,42 @@
+name: Debian Vocabulary
+description: >-
+  Shared vocabulary of terms used across Debian's developer-facing
+  services - sources.debian.org, the Bug Tracking System, and the
+  Ultimate Debian Database.
+terms:
+  - term: Source Package
+    definition: >-
+      The collection of upstream sources plus Debian packaging needed to
+      build one or more binary packages.
+  - term: Binary Package
+    definition: A compiled .deb file installable via apt or dpkg.
+  - term: Suite
+    definition: >-
+      A named release channel such as stable, testing, unstable, or
+      experimental.
+  - term: Maintainer
+    definition: The Debian Developer responsible for a source package.
+  - term: BTS
+    definition: >-
+      The Debian Bug Tracking System at bugs.debian.org, used to file and
+      track issues against packages and pseudo-packages.
+  - term: Severity
+    definition: >-
+      A bug's importance, ranging from wishlist through normal, important,
+      serious, grave, and critical.
+  - term: Lintian
+    definition: >-
+      A tool that checks Debian packages against policy and best
+      practices; results are surfaced via UDD.
+  - term: UDD
+    definition: >-
+      The Ultimate Debian Database - a Postgres database aggregating
+      Debian-wide data for cross-cutting queries.
+  - term: Reproducible Build
+    definition: >-
+      A build process that yields bit-for-bit identical artifacts when
+      repeated under the same inputs.
+  - term: Patch
+    definition: >-
+      A change carried by Debian on top of upstream source, surfaced via
+      sources.debian.org/patches.
