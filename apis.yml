@@ -107,6 +107,10 @@ common:
     url: json-ld/debian-context.jsonld
   - type: Vocabulary
     url: vocabulary/debian-vocabulary.yml
+  - type: Integrations
+    url: https://www.debian.org/partners/
+integrations:
+  - name: Partners Program
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
