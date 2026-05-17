@@ -16,7 +16,7 @@ tags:
 created: '2025-01-01'
 modified: '2026-04-28'
 specificationVersion: '0.19'
-xType: opensource
+kind: opensource
 description: >-
   Debian is a free operating system distribution maintained by the Debian
   Project, a community of more than a thousand volunteers worldwide.
@@ -99,11 +99,11 @@ common:
     url: https://salsa.debian.org/
   - type: Mailing Lists
     url: https://lists.debian.org/
-  - type: Privacy Policy
+  - type: PrivacyPolicy
     url: https://www.debian.org/legal/privacy
   - type: License
     url: https://www.debian.org/social_contract
-  - type: JSON-LD
+  - type: JSONLD
     url: json-ld/debian-context.jsonld
   - type: Vocabulary
     url: vocabulary/debian-vocabulary.yml
