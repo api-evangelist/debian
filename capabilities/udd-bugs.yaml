@@ -1,0 +1,67 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Debian Ultimate Database (UDD) Web Tools — Bugs
+  description: 'Debian Ultimate Database (UDD) Web Tools — Bugs. 1 operations. Lead operation: Search Debian bugs (UDD). Self-contained
+    Naftiko capability covering one Debian business surface.'
+  tags:
+  - Debian
+  - Bugs
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    DEBIAN_API_KEY: DEBIAN_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: udd-bugs
+    baseUri: https://udd.debian.org
+    description: Debian Ultimate Database (UDD) Web Tools — Bugs business capability. Self-contained, no shared references.
+    resources:
+    - name: bugs
+      path: /bugs/
+      operations:
+      - name: searchbugs
+        method: GET
+        description: Search Debian bugs (UDD)
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    namespace: udd-bugs-rest
+    port: 8080
+    description: REST adapter for Debian Ultimate Database (UDD) Web Tools — Bugs. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.
+    resources:
+    - path: /v1/bugs
+      name: bugs
+      description: REST surface for bugs.
+      operations:
+      - method: GET
+        name: searchbugs
+        description: Search Debian bugs (UDD)
+        call: udd-bugs.searchbugs
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: udd-bugs-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Debian Ultimate Database (UDD) Web Tools — Bugs. One tool per consumed operation, routed
+      inline through this capability's consumes block.
+    tools:
+    - name: search-debian-bugs-udd
+      description: Search Debian bugs (UDD)
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: udd-bugs.searchbugs
+      outputParameters:
+      - type: object
+        mapping: $.

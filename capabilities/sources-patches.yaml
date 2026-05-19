@@ -1,0 +1,82 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Debian Sources API — Patches
+  description: 'Debian Sources API — Patches. 1 operations. Lead operation: List Debian patches for a package. Self-contained
+    Naftiko capability covering one Debian business surface.'
+  tags:
+  - Debian
+  - Patches
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    DEBIAN_API_KEY: DEBIAN_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: sources-patches
+    baseUri: https://sources.debian.org/api
+    description: Debian Sources API — Patches business capability. Self-contained, no shared references.
+    resources:
+    - name: patches-api-package-version
+      path: /patches/api/{package}/{version}
+      operations:
+      - name: listpatches
+        method: GET
+        description: List Debian patches for a package
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: package
+          in: path
+          type: string
+          required: true
+        - name: version
+          in: path
+          type: string
+          required: true
+  exposes:
+  - type: rest
+    namespace: sources-patches-rest
+    port: 8080
+    description: REST adapter for Debian Sources API — Patches. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/patches/api/{package}/{version}
+      name: patches-api-package-version
+      description: REST surface for patches-api-package-version.
+      operations:
+      - method: GET
+        name: listpatches
+        description: List Debian patches for a package
+        call: sources-patches.listpatches
+        with:
+          package: rest.package
+          version: rest.version
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: sources-patches-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Debian Sources API — Patches. One tool per consumed operation, routed inline through this
+      capability's consumes block.
+    tools:
+    - name: list-debian-patches-package
+      description: List Debian patches for a package
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: sources-patches.listpatches
+      with:
+        package: tools.package
+        version: tools.version
+      outputParameters:
+      - type: object
+        mapping: $.

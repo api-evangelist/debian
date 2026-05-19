@@ -1,0 +1,67 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Debian Ultimate Database (UDD) Web Tools — Maintainers
+  description: 'Debian Ultimate Database (UDD) Web Tools — Maintainers. 1 operations. Lead operation: Maintainer dashboard.
+    Self-contained Naftiko capability covering one Debian business surface.'
+  tags:
+  - Debian
+  - Maintainers
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    DEBIAN_API_KEY: DEBIAN_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: udd-maintainers
+    baseUri: https://udd.debian.org
+    description: Debian Ultimate Database (UDD) Web Tools — Maintainers business capability. Self-contained, no shared references.
+    resources:
+    - name: dmd
+      path: /dmd/
+      operations:
+      - name: getmaintainerdashboard
+        method: GET
+        description: Maintainer dashboard
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    namespace: udd-maintainers-rest
+    port: 8080
+    description: REST adapter for Debian Ultimate Database (UDD) Web Tools — Maintainers. One Spectral-compliant resource
+      per consumed operation, prefixed with /v1.
+    resources:
+    - path: /v1/dmd
+      name: dmd
+      description: REST surface for dmd.
+      operations:
+      - method: GET
+        name: getmaintainerdashboard
+        description: Maintainer dashboard
+        call: udd-maintainers.getmaintainerdashboard
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: udd-maintainers-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Debian Ultimate Database (UDD) Web Tools — Maintainers. One tool per consumed operation,
+      routed inline through this capability's consumes block.
+    tools:
+    - name: maintainer-dashboard
+      description: Maintainer dashboard
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: udd-maintainers.getmaintainerdashboard
+      outputParameters:
+      - type: object
+        mapping: $.
