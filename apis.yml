@@ -6,13 +6,13 @@ position: Provider
 access: Public
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-- Bug Tracker
-- Debian
-- Linux
-- Open Source
-- Operating System
-- Package Management
-- Source Code
+  - Bug Tracker
+  - Debian
+  - Linux
+  - Open Source
+  - Operating System
+  - Package Management
+  - Source Code
 created: '2025-01-01'
 modified: '2026-05-19'
 specificationVersion: '0.19'
@@ -22,100 +22,102 @@ description: Debian is a free operating system distribution maintained by the De
   the Bug Tracking System (BTS) at bugs.debian.org, and the Ultimate Debian Database (UDD) - a single Postgres database aggregating
   package, bug, Lintian, popcon, and reproducibility data for cross-cutting queries.
 apis:
-- aid: debian:debian-sources-api
-  name: Debian Sources API
-  description: The Debian Sources API at sources.debian.org provides programmatic access to source code, package metadata,
-    copyright records, and Debian patches for every source package in the archive.
-  humanURL: https://sources.debian.org/doc/api/
-  baseURL: https://sources.debian.org/api
-  tags:
-  - Copyright
-  - Packages
-  - Patches
-  - Source Code
-  properties:
-  - type: Documentation
-    url: https://sources.debian.org/doc/api/
-  - type: OpenAPI
-    url: openapi/debian-sources-api-openapi.yml
-  - type: JSONSchema
-    url: json-schema/debian-package.json
-  - type: Rules
-    url: rules/debian-sources-api-rules.yml
-  - type: Capabilities
-    url: capabilities/debian-sources-api-capabilities.yml
-  - type: NaftikoCapability
-    url: capabilities/sources-copyright.yaml
-  - type: NaftikoCapability
-    url: capabilities/sources-patches.yaml
-  - type: NaftikoCapability
-    url: capabilities/sources-sources.yaml
-- aid: debian:debian-bts-api
-  name: Debian Bug Tracking System
-  description: The Debian BTS at bugs.debian.org tracks bugs against packages and pseudo-packages. Bug reports are accessible
-    as machine-readable mbox files and structured CGI views, with email serving as the canonical interaction surface.
-  humanURL: https://www.debian.org/Bugs/
-  baseURL: https://bugs.debian.org
-  tags:
-  - Bugs
-  - Maintainers
-  - Severity
-  properties:
-  - type: Documentation
-    url: https://www.debian.org/Bugs/
-  - type: OpenAPI
-    url: openapi/debian-bts-api-openapi.yml
-  - type: JSONSchema
-    url: json-schema/debian-bug.json
-  - type: NaftikoCapability
-    url: capabilities/bts-bugs.yaml
-- aid: debian:debian-udd
-  name: Debian Ultimate Database (UDD)
-  description: The Ultimate Debian Database aggregates Debian-wide data into a single Postgres database and exposes web tools
-    for bugs, maintainer dashboards, Lintian results, reproducibility, and more.
-  humanURL: https://wiki.debian.org/UltimateDebianDatabase
-  baseURL: https://udd.debian.org
-  tags:
-  - Aggregated Data
-  - Lintian
-  - Reproducibility
-  - SQL
-  properties:
-  - type: Documentation
-    url: https://wiki.debian.org/UltimateDebianDatabase
-  - type: OpenAPI
-    url: openapi/debian-udd-api-openapi.yml
-  - type: NaftikoCapability
-    url: capabilities/udd-bugs.yaml
-  - type: NaftikoCapability
-    url: capabilities/udd-maintainers.yaml
-  - type: NaftikoCapability
-    url: capabilities/udd-reproducibility.yaml
+  - aid: debian:debian-sources-api
+    name: Debian Sources API
+    description: The Debian Sources API at sources.debian.org provides programmatic access to source code, package metadata,
+      copyright records, and Debian patches for every source package in the archive.
+    humanURL: https://sources.debian.org/doc/api/
+    baseURL: https://sources.debian.org/api
+    tags:
+    - Copyright
+    - Packages
+    - Patches
+    - Source Code
+    properties:
+    - type: Documentation
+      url: https://sources.debian.org/doc/api/
+    - type: OpenAPI
+      url: openapi/debian-sources-api-openapi.yml
+    - type: JSONSchema
+      url: json-schema/debian-package.json
+    - type: Rules
+      url: rules/debian-sources-api-rules.yml
+    - type: Capabilities
+      url: capabilities/debian-sources-api-capabilities.yml
+    - type: NaftikoCapability
+      url: capabilities/sources-copyright.yaml
+    - type: NaftikoCapability
+      url: capabilities/sources-patches.yaml
+    - type: NaftikoCapability
+      url: capabilities/sources-sources.yaml
+  - aid: debian:debian-bts-api
+    name: Debian Bug Tracking System
+    description: The Debian BTS at bugs.debian.org tracks bugs against packages and pseudo-packages. Bug reports are accessible
+      as machine-readable mbox files and structured CGI views, with email serving as the canonical interaction surface.
+    humanURL: https://www.debian.org/Bugs/
+    baseURL: https://bugs.debian.org
+    tags:
+    - Bugs
+    - Maintainers
+    - Severity
+    properties:
+    - type: Documentation
+      url: https://www.debian.org/Bugs/
+    - type: OpenAPI
+      url: openapi/debian-bts-api-openapi.yml
+    - type: JSONSchema
+      url: json-schema/debian-bug.json
+    - type: NaftikoCapability
+      url: capabilities/bts-bugs.yaml
+  - aid: debian:debian-udd
+    name: Debian Ultimate Database (UDD)
+    description: The Ultimate Debian Database aggregates Debian-wide data into a single Postgres database and exposes web tools
+      for bugs, maintainer dashboards, Lintian results, reproducibility, and more.
+    humanURL: https://wiki.debian.org/UltimateDebianDatabase
+    baseURL: https://udd.debian.org
+    tags:
+    - Aggregated Data
+    - Lintian
+    - Reproducibility
+    - SQL
+    properties:
+    - type: Documentation
+      url: https://wiki.debian.org/UltimateDebianDatabase
+    - type: OpenAPI
+      url: openapi/debian-udd-api-openapi.yml
+    - type: NaftikoCapability
+      url: capabilities/udd-bugs.yaml
+    - type: NaftikoCapability
+      url: capabilities/udd-maintainers.yaml
+    - type: NaftikoCapability
+      url: capabilities/udd-reproducibility.yaml
 common:
-- type: LinkedIn
-  url: https://www.linkedin.com/company/debian
-- type: Website
-  url: https://www.debian.org/
-- type: Wiki
-  url: https://wiki.debian.org/
-- type: Documentation
-  url: https://www.debian.org/doc/
-- type: GitLab
-  url: https://salsa.debian.org/
-- type: Mailing Lists
-  url: https://lists.debian.org/
-- type: PrivacyPolicy
-  url: https://www.debian.org/legal/privacy
-- type: License
-  url: https://www.debian.org/social_contract
-- type: JSONLD
-  url: json-ld/debian-context.jsonld
-- type: Vocabulary
-  url: vocabulary/debian-vocabulary.yml
-- type: Integrations
-  url: https://www.debian.org/partners/
+  - type: GitHubOrganization
+    url: https://github.com/Debian
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/debian
+  - type: Website
+    url: https://www.debian.org/
+  - type: Wiki
+    url: https://wiki.debian.org/
+  - type: Documentation
+    url: https://www.debian.org/doc/
+  - type: GitLab
+    url: https://salsa.debian.org/
+  - type: Mailing Lists
+    url: https://lists.debian.org/
+  - type: PrivacyPolicy
+    url: https://www.debian.org/legal/privacy
+  - type: License
+    url: https://www.debian.org/social_contract
+  - type: JSONLD
+    url: json-ld/debian-context.jsonld
+  - type: Vocabulary
+    url: vocabulary/debian-vocabulary.yml
+  - type: Integrations
+    url: https://www.debian.org/partners/
 integrations:
-- name: Partners Program
+  - name: Partners Program
 maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com
