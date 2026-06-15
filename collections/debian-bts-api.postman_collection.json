@@ -1,0 +1,250 @@
+{
+  "item": [
+    {
+      "id": "457226fd-951c-4360-960c-bb76f211e89b",
+      "name": "Bugs",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e3e2944b-0657-441e-8ee0-258272aaac94",
+          "name": "View a bug report",
+          "request": {
+            "name": "View a bug report",
+            "description": {},
+            "url": {
+              "path": [
+                ":bugId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "bugId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "92142487-083b-4be7-87fa-129ed24544cc",
+              "name": "HTML and structured views of a bug report.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":bugId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "bugId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "84f3653f-961e-41ba-9d64-728a428fdee7",
+          "name": "Bug report (mbox/text/HTML)",
+          "request": {
+            "name": "Bug report (mbox/text/HTML)",
+            "description": {},
+            "url": {
+              "path": [
+                "cgi-bin",
+                "bugreport.cgi"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "bug",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "mbox",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b418b6b2-0fed-41e0-85ab-e06f25fc5b59",
+              "name": "Bug report in the requested format.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cgi-bin",
+                    "bugreport.cgi"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "bug",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "mbox",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "92b96dce-bf6a-4789-b71e-a3be6f250441",
+          "name": "List bugs against a package",
+          "request": {
+            "name": "List bugs against a package",
+            "description": {},
+            "url": {
+              "path": [
+                "cgi-bin",
+                "pkgreport.cgi"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "pkg",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "cef7ae79-145e-4a22-943d-318ca167dae2",
+              "name": "List of bugs against the package.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cgi-bin",
+                    "pkgreport.cgi"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "pkg",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://bugs.debian.org",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "b0a8d025-280f-4aa5-bf1e-f6dd49fcbda4",
+    "name": "Debian Bug Tracking System API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Debian BTS exposes per-bug machine-readable views via .mbox and structured URLs at bugs.debian.org. Bug reports can also be retrieved in JSON via various community endpoints. The historical SOAP API at bugs.debian.org/cgi-bin/soap.cgi is documented for reference.",
+      "type": "text/plain"
+    }
+  }
+}

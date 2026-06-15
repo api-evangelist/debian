@@ -1,0 +1,241 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Debian Sources API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Sources",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search source code",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sources.debian.org/api/search/:query",
+            "params": [
+              {
+                "name": "query",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Search source code"
+        },
+        {
+          "info": {
+            "name": "List all packages",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sources.debian.org/api/list"
+          },
+          "docs": "List all packages"
+        },
+        {
+          "info": {
+            "name": "List packages by prefix",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sources.debian.org/api/prefix/:prefix",
+            "params": [
+              {
+                "name": "prefix",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List packages by prefix"
+        },
+        {
+          "info": {
+            "name": "Get package info",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sources.debian.org/api/info/package/:package/:version",
+            "params": [
+              {
+                "name": "package",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get package info"
+        },
+        {
+          "info": {
+            "name": "Browse source tree",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sources.debian.org/api/src/:package/:version/:path",
+            "params": [
+              {
+                "name": "package",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "path",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Browse source tree"
+        },
+        {
+          "info": {
+            "name": "Search by file checksum",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sources.debian.org/api/sha256/",
+            "params": [
+              {
+                "name": "checksum",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Search by file checksum"
+        },
+        {
+          "info": {
+            "name": "Search by ctag",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sources.debian.org/api/ctag/",
+            "params": [
+              {
+                "name": "ctag",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Search by ctag"
+        },
+        {
+          "info": {
+            "name": "Health check",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sources.debian.org/api/ping/"
+          },
+          "docs": "Health check"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Copyright",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Look up copyright for a file checksum",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sources.debian.org/api/copyright/api/sha256/"
+          },
+          "docs": "Look up copyright for a file checksum"
+        },
+        {
+          "info": {
+            "name": "Get copyright for a file path",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sources.debian.org/api/copyright/api/file/:package/:version/:path",
+            "params": [
+              {
+                "name": "package",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "path",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get copyright for a file path"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Patches",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Debian patches for a package",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sources.debian.org/api/patches/api/:package/:version",
+            "params": [
+              {
+                "name": "package",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List Debian patches for a package"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

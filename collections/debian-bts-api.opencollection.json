@@ -1,0 +1,77 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Debian Bug Tracking System API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Bugs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "View a bug report",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://bugs.debian.org/:bugId",
+            "params": [
+              {
+                "name": "bugId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "View a bug report"
+        },
+        {
+          "info": {
+            "name": "Bug report (mbox/text/HTML)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://bugs.debian.org/cgi-bin/bugreport.cgi",
+            "params": [
+              {
+                "name": "bug",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "mbox",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Bug report (mbox/text/HTML)"
+        },
+        {
+          "info": {
+            "name": "List bugs against a package",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://bugs.debian.org/cgi-bin/pkgreport.cgi",
+            "params": [
+              {
+                "name": "pkg",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List bugs against a package"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

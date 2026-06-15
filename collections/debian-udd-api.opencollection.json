@@ -1,0 +1,67 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Debian Ultimate Database (UDD) Web Tools",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Bugs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search Debian bugs (UDD)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://udd.debian.org/bugs/"
+          },
+          "docs": "Search Debian bugs (UDD)"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Maintainers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Maintainer dashboard",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://udd.debian.org/dmd/"
+          },
+          "docs": "Maintainer dashboard"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Reproducibility",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Reproducibility dashboard",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://udd.debian.org/reproducible/"
+          },
+          "docs": "Reproducibility dashboard"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

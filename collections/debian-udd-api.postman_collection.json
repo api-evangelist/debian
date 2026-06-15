@@ -1,0 +1,225 @@
+{
+  "item": [
+    {
+      "id": "57fa35cd-514c-4e5d-867b-690e7d63857c",
+      "name": "Bugs",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "242ab7e5-8884-46e5-9feb-cce4df8ec83d",
+          "name": "Search Debian bugs (UDD)",
+          "request": {
+            "name": "Search Debian bugs (UDD)",
+            "description": {},
+            "url": {
+              "path": [
+                "bugs",
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d2b81958-419e-4e8f-93f5-9557c089f4e2",
+              "name": "Multi-criteria search across Debian bug data.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "bugs",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "0dbad449-49fa-4778-92b9-db483ce7f09c",
+      "name": "Maintainers",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4abafc69-c421-46a0-ab92-26734cb8373d",
+          "name": "Maintainer dashboard",
+          "request": {
+            "name": "Maintainer dashboard",
+            "description": {},
+            "url": {
+              "path": [
+                "dmd",
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "cf44c223-48e7-4de6-a401-8989a58770ee",
+              "name": "Dashboard data for a maintainer or team.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dmd",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "f6196060-99e7-4b3d-b945-4de66edc989a",
+      "name": "Reproducibility",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "17db9ee0-459d-47da-8495-72186266d00e",
+          "name": "Reproducibility dashboard",
+          "request": {
+            "name": "Reproducibility dashboard",
+            "description": {},
+            "url": {
+              "path": [
+                "reproducible",
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "492f7e7a-3f7c-46ff-96ac-09c9ee907d84",
+              "name": "Build reproducibility status for Debian packages.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "reproducible",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://udd.debian.org",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "d1370c2a-4cf7-4576-a34a-a21970b3115a",
+    "name": "Debian Ultimate Database (UDD) Web Tools",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Ultimate Debian Database (UDD) gathers Debian package, bug, Lintian, popcon, and reproducibility data into a single SQL database. UDD exposes web tools and JSON exports (such as the bugs-search and maintainer dashboards) at udd.debian.org rather than a single formal REST API.",
+      "type": "text/plain"
+    }
+  }
+}
