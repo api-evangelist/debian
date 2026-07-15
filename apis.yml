@@ -83,6 +83,8 @@ apis:
       - type: OpenAPI
         url: openapi/debian-udd-api-openapi.yml
 common:
+  - type: AgenticAccess
+    url: agentic-access/debian-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/debian-vulnerability-disclosure.yml
   - type: DomainSecurity
