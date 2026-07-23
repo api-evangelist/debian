@@ -1,0 +1,31 @@
+openapi: 3.1.0
+info:
+  title: Debian Bug Tracking System Bugs Patches API
+  description: The Debian BTS exposes per-bug machine-readable views via .mbox and structured URLs at bugs.debian.org. Bug reports can also be retrieved in JSON via various community endpoints. The historical SOAP API at bugs.debian.org/cgi-bin/soap.cgi is documented for reference.
+  version: '1.0'
+servers:
+- url: https://bugs.debian.org
+  description: Debian Bug Tracking System
+tags:
+- name: Patches
+paths:
+  /patches/api/{package}/{version}:
+    get:
+      summary: List Debian patches for a package
+      operationId: listPatches
+      tags:
+      - Patches
+      parameters:
+      - in: path
+        name: package
+        required: true
+        schema:
+          type: string
+      - in: path
+        name: version
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Patches applied by Debian to upstream sources.

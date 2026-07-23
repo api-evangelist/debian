@@ -1,0 +1,45 @@
+openapi: 3.1.0
+info:
+  title: Debian Bug Tracking System Bugs Copyright API
+  description: The Debian BTS exposes per-bug machine-readable views via .mbox and structured URLs at bugs.debian.org. Bug reports can also be retrieved in JSON via various community endpoints. The historical SOAP API at bugs.debian.org/cgi-bin/soap.cgi is documented for reference.
+  version: '1.0'
+servers:
+- url: https://bugs.debian.org
+  description: Debian Bug Tracking System
+tags:
+- name: Copyright
+paths:
+  /copyright/api/sha256/:
+    get:
+      summary: Look up copyright for a file checksum
+      operationId: copyrightBySha256
+      tags:
+      - Copyright
+      responses:
+        '200':
+          description: Copyright record for a file.
+  /copyright/api/file/{package}/{version}/{path}:
+    get:
+      summary: Get copyright for a file path
+      operationId: copyrightByFile
+      tags:
+      - Copyright
+      parameters:
+      - in: path
+        name: package
+        required: true
+        schema:
+          type: string
+      - in: path
+        name: version
+        required: true
+        schema:
+          type: string
+      - in: path
+        name: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Copyright record.

@@ -1,0 +1,20 @@
+openapi: 3.1.0
+info:
+  title: Debian Bug Tracking System Bugs Maintainers API
+  description: The Debian BTS exposes per-bug machine-readable views via .mbox and structured URLs at bugs.debian.org. Bug reports can also be retrieved in JSON via various community endpoints. The historical SOAP API at bugs.debian.org/cgi-bin/soap.cgi is documented for reference.
+  version: '1.0'
+servers:
+- url: https://bugs.debian.org
+  description: Debian Bug Tracking System
+tags:
+- name: Maintainers
+paths:
+  /dmd/:
+    get:
+      summary: Maintainer dashboard
+      operationId: getMaintainerDashboard
+      tags:
+      - Maintainers
+      responses:
+        '200':
+          description: Dashboard data for a maintainer or team.
