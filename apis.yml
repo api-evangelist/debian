@@ -2,9 +2,21 @@ aid: debian
 name: Debian
 url: https://raw.githubusercontent.com/api-evangelist/debian/refs/heads/main/apis.yml
 type: Index
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
 position: Provider
 access: Public
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/debian.png
 tags:
   - Bug Tracker
   - Debian
@@ -24,64 +36,109 @@ description: >-
   single Postgres database aggregating package, bug, Lintian, popcon, and reproducibility data for cross-cutting
   queries.
 apis:
-  - aid: debian:debian-sources-api
-    name: Debian Sources API
-    description: >-
-      The Debian Sources API at sources.debian.org provides programmatic access to source code, package metadata,
-      copyright records, and Debian patches for every source package in the archive.
-    humanURL: https://sources.debian.org/doc/api/
-    baseURL: https://sources.debian.org/api
-    tags:
-      - Copyright
-      - Packages
-      - Patches
-      - Source Code
-    properties:
-      - type: Documentation
-        url: https://sources.debian.org/doc/api/
-      - type: OpenAPI
-        url: openapi/debian-sources-api-openapi.yml
-      - type: JSONSchema
-        url: json-schema/debian-package.json
-      - type: Rules
-        url: rules/debian-sources-api-rules.yml
-      - type: Capabilities
-        url: capabilities/debian-sources-api-capabilities.yml
-  - aid: debian:debian-bts-api
-    name: Debian Bug Tracking System
-    description: >-
-      The Debian BTS at bugs.debian.org tracks bugs against packages and pseudo-packages. Bug reports are accessible as
-      machine-readable mbox files and structured CGI views, with email serving as the canonical interaction surface.
-    humanURL: https://www.debian.org/Bugs/
-    baseURL: https://bugs.debian.org
-    tags:
-      - Bugs
-      - Maintainers
-      - Severity
-    properties:
-      - type: Documentation
-        url: https://www.debian.org/Bugs/
-      - type: OpenAPI
-        url: openapi/debian-bts-api-openapi.yml
-      - type: JSONSchema
-        url: json-schema/debian-bug.json
-  - aid: debian:debian-udd
-    name: Debian Ultimate Database (UDD)
-    description: >-
-      The Ultimate Debian Database aggregates Debian-wide data into a single Postgres database and exposes web tools for
-      bugs, maintainer dashboards, Lintian results, reproducibility, and more.
-    humanURL: https://wiki.debian.org/UltimateDebianDatabase
-    baseURL: https://udd.debian.org
-    tags:
-      - Aggregated Data
-      - Lintian
-      - Reproducibility
-      - SQL
-    properties:
-      - type: Documentation
-        url: https://wiki.debian.org/UltimateDebianDatabase
-      - type: OpenAPI
-        url: openapi/debian-udd-api-openapi.yml
+- aid: debian:debian-sources-api
+  name: Debian Sources API
+  description: >-
+    The Debian Sources API at sources.debian.org provides programmatic access to source code, package
+    metadata, copyright records, and Debian patches for every source package in the archive.
+  humanURL: https://sources.debian.org/doc/api/
+  baseURL: https://sources.debian.org/api
+  tags:
+  - Copyright
+  - Packages
+  - Patches
+  - Source Code
+  properties:
+  - type: Documentation
+    url: https://sources.debian.org/doc/api/
+  - type: OpenAPI
+    url: openapi/debian-sources-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/debian-package.json
+  - type: Rules
+    url: rules/debian-sources-api-rules.yml
+  - type: Capabilities
+    url: capabilities/debian-sources-api-capabilities.yml
+- aid: debian:debian-bugs-api
+  name: Debian Bugs API
+  description: The Bugs API from Debian — 4 operation(s) for bugs.
+  humanURL: https://sources.debian.org/doc/api/
+  baseURL: https://sources.debian.org/api
+  tags:
+  - Bugs
+  properties:
+  - type: OpenAPI
+    url: openapi/debian-bugs-api-openapi.yml
+  - type: Documentation
+    url: https://www.debian.org/Bugs/
+  - type: JSONSchema
+    url: json-schema/debian-bug.json
+  - type: Documentation
+    url: https://wiki.debian.org/UltimateDebianDatabase
+- aid: debian:debian-copyright-api
+  name: Debian Copyright API
+  description: The Copyright API from Debian — 2 operation(s) for copyright.
+  humanURL: https://sources.debian.org/doc/api/
+  baseURL: https://sources.debian.org/api
+  tags:
+  - Copyright
+  properties:
+  - type: OpenAPI
+    url: openapi/debian-copyright-api-openapi.yml
+  - type: Documentation
+    url: https://www.debian.org/Bugs/
+  - type: JSONSchema
+    url: json-schema/debian-bug.json
+  - type: Documentation
+    url: https://wiki.debian.org/UltimateDebianDatabase
+- aid: debian:debian-maintainers-api
+  name: Debian Maintainers API
+  description: The Maintainers API from Debian — 1 operation(s) for maintainers.
+  humanURL: https://sources.debian.org/doc/api/
+  baseURL: https://sources.debian.org/api
+  tags:
+  - Maintainers
+  properties:
+  - type: OpenAPI
+    url: openapi/debian-maintainers-api-openapi.yml
+  - type: Documentation
+    url: https://www.debian.org/Bugs/
+  - type: JSONSchema
+    url: json-schema/debian-bug.json
+  - type: Documentation
+    url: https://wiki.debian.org/UltimateDebianDatabase
+- aid: debian:debian-patches-api
+  name: Debian Patches API
+  description: The Patches API from Debian — 1 operation(s) for patches.
+  humanURL: https://sources.debian.org/doc/api/
+  baseURL: https://sources.debian.org/api
+  tags:
+  - Patches
+  properties:
+  - type: OpenAPI
+    url: openapi/debian-patches-api-openapi.yml
+  - type: Documentation
+    url: https://www.debian.org/Bugs/
+  - type: JSONSchema
+    url: json-schema/debian-bug.json
+  - type: Documentation
+    url: https://wiki.debian.org/UltimateDebianDatabase
+- aid: debian:debian-reproducibility-api
+  name: Debian Reproducibility API
+  description: The Reproducibility API from Debian — 1 operation(s) for reproducibility.
+  humanURL: https://sources.debian.org/doc/api/
+  baseURL: https://sources.debian.org/api
+  tags:
+  - Reproducibility
+  properties:
+  - type: OpenAPI
+    url: openapi/debian-reproducibility-api-openapi.yml
+  - type: Documentation
+    url: https://www.debian.org/Bugs/
+  - type: JSONSchema
+    url: json-schema/debian-bug.json
+  - type: Documentation
+    url: https://wiki.debian.org/UltimateDebianDatabase
 common:
   - type: AgenticAccess
     url: agentic-access/debian-agentic-access.yml
