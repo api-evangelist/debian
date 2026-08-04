@@ -1,0 +1,24 @@
+{
+  "provider": "debian",
+  "sources": [
+    "debian-bugs-api-openapi.yml",
+    "debian-copyright-api-openapi.yml",
+    "debian-maintainers-api-openapi.yml",
+    "debian-patches-api-openapi.yml",
+    "debian-reproducibility-api-openapi.yml",
+    "debian-sources-api-openapi.yml"
+  ],
+  "outputs": [
+    "debian-bugs-api-openapi.yml",
+    "debian-copyright-api-openapi.yml",
+    "debian-maintainers-api-openapi.yml",
+    "debian-patches-api-openapi.yml",
+    "debian-reproducibility-api-openapi.yml",
+    "debian-sources-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
