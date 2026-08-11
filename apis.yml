@@ -57,8 +57,6 @@ apis:
     url: json-schema/debian-package.json
   - type: Rules
     url: rules/debian-sources-api-rules.yml
-  - type: Capabilities
-    url: capabilities/debian-sources-api-capabilities.yml
 - aid: debian:debian-bugs-api
   name: Debian Bugs API
   description: The Bugs API from Debian — 4 operation(s) for bugs.
