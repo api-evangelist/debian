@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Debian Bug Tracking System Bugs Maintainers API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Maintainers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Maintainer dashboard",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://bugs.debian.org/dmd/"
+          },
+          "docs": "Maintainer dashboard"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Debian Bug Tracking System Bugs Reproducibility API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Reproducibility",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Reproducibility dashboard",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://bugs.debian.org/reproducible/"
+          },
+          "docs": "Reproducibility dashboard"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

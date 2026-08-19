@@ -1,0 +1,89 @@
+{
+  "item": [
+    {
+      "id": "0f0f0937-2740-4f19-9971-142887903401",
+      "name": "Maintainers",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4d5edb81-a75f-4247-957e-8f4564b9110a",
+          "name": "Maintainer dashboard",
+          "request": {
+            "name": "Maintainer dashboard",
+            "description": {},
+            "url": {
+              "path": [
+                "dmd",
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f8806213-4701-4d9c-98ad-4c1bfb139e9a",
+              "name": "Dashboard data for a maintainer or team.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dmd",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://bugs.debian.org",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "ffaabd2b-a099-40f5-b60c-46039fe4e190",
+    "name": "Debian Bug Tracking System Bugs Maintainers API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Debian BTS exposes per-bug machine-readable views via .mbox and structured URLs at bugs.debian.org. Bug reports can also be retrieved in JSON via various community endpoints. The historical SOAP API at bugs.debian.org/cgi-bin/soap.cgi is documented for reference.",
+      "type": "text/plain"
+    }
+  }
+}

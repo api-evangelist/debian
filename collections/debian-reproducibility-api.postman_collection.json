@@ -1,0 +1,89 @@
+{
+  "item": [
+    {
+      "id": "d143f6ef-5e1d-435c-aa95-c21691dd5df9",
+      "name": "Reproducibility",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c92ac0dc-ea37-477d-89f1-37c5962e8a03",
+          "name": "Reproducibility dashboard",
+          "request": {
+            "name": "Reproducibility dashboard",
+            "description": {},
+            "url": {
+              "path": [
+                "reproducible",
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "728ff300-3b4d-42f1-b5ee-c8efb6124fd0",
+              "name": "Build reproducibility status for Debian packages.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "reproducible",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://bugs.debian.org",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "6c6a3646-fda1-48d0-8451-f402271495e0",
+    "name": "Debian Bug Tracking System Bugs Reproducibility API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Debian BTS exposes per-bug machine-readable views via .mbox and structured URLs at bugs.debian.org. Bug reports can also be retrieved in JSON via various community endpoints. The historical SOAP API at bugs.debian.org/cgi-bin/soap.cgi is documented for reference.",
+      "type": "text/plain"
+    }
+  }
+}

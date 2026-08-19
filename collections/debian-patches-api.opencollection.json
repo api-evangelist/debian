@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Debian Bug Tracking System Bugs Patches API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Patches",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Debian patches for a package",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://bugs.debian.org/patches/api/:package/:version",
+            "params": [
+              {
+                "name": "package",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List Debian patches for a package"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

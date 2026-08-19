@@ -1,7 +1,7 @@
 {
   "item": [
     {
-      "id": "2bb925a7-ed86-4dc2-a353-3bcce124b211",
+      "id": "3faf3079-aeee-4266-9f03-0a71a02ada17",
       "name": "Sources",
       "description": {
         "content": "",
@@ -9,7 +9,7 @@
       },
       "item": [
         {
-          "id": "60d253bb-81d8-4d49-a264-eaad8fa42eb4",
+          "id": "acef1e59-9e33-492c-9493-fc4190bb383f",
           "name": "Search source code",
           "request": {
             "name": "Search source code",
@@ -38,7 +38,7 @@
           },
           "response": [
             {
-              "id": "fe09356c-2ed4-47aa-bf8b-b8a628f3a26d",
+              "id": "18f3071e-9f50-4dea-9589-95d1d109e76b",
               "name": "Search results across Debian source packages.",
               "originalRequest": {
                 "url": {
@@ -82,7 +82,7 @@
           }
         },
         {
-          "id": "a81a0cef-7ed1-404e-8d30-b9f112db0aa8",
+          "id": "f3dd1591-5d65-406a-b2dd-f9cc77dfd8fe",
           "name": "List all packages",
           "request": {
             "name": "List all packages",
@@ -102,7 +102,7 @@
           },
           "response": [
             {
-              "id": "0a9e401c-deea-4a98-be6a-5d93de7daada",
+              "id": "4c91d4f4-1eff-4649-b07a-40127faeb403",
               "name": "A list of all source packages.",
               "originalRequest": {
                 "url": {
@@ -137,7 +137,7 @@
           }
         },
         {
-          "id": "533aca4d-0221-4209-a0ae-31f4d73a112b",
+          "id": "23cafc34-dbaf-4e9c-a5ff-6d8cec7d78a9",
           "name": "List packages by prefix",
           "request": {
             "name": "List packages by prefix",
@@ -166,7 +166,7 @@
           },
           "response": [
             {
-              "id": "6b97d6a7-b6a5-429a-b2e5-e7fc9bd661cb",
+              "id": "135c33bd-85a5-41b8-9cd9-1dda9711a2d0",
               "name": "Packages whose name begins with the given prefix.",
               "originalRequest": {
                 "url": {
@@ -210,7 +210,7 @@
           }
         },
         {
-          "id": "4d2b06bf-946d-492e-aeb3-d3cccf015770",
+          "id": "003ed739-3323-4292-8883-28ecfb37a11b",
           "name": "Get package info",
           "request": {
             "name": "Get package info",
@@ -248,7 +248,7 @@
           },
           "response": [
             {
-              "id": "65da2257-d2df-40c7-a05e-f3bcc300da4e",
+              "id": "c40387cf-489e-4d93-bbdc-5987304fef19",
               "name": "Metadata for a specific package version.",
               "originalRequest": {
                 "url": {
@@ -301,7 +301,7 @@
           }
         },
         {
-          "id": "250e7f53-d8ab-4cce-9f42-31a3186410db",
+          "id": "b7c374aa-73d4-4e33-a0ad-33ec307b90d9",
           "name": "Browse source tree",
           "request": {
             "name": "Browse source tree",
@@ -346,7 +346,7 @@
           },
           "response": [
             {
-              "id": "28100ed0-dc53-4c87-aa02-cba7eed34287",
+              "id": "3b20b043-8150-40fa-a8d1-682430e846a2",
               "name": "Source-tree entry (file or directory listing).",
               "originalRequest": {
                 "url": {
@@ -406,7 +406,7 @@
           }
         },
         {
-          "id": "78fbfdd5-2509-4890-90d3-080ffb809621",
+          "id": "14e0a33b-7659-43f5-902c-3e1b0ddf94cf",
           "name": "Search by file checksum",
           "request": {
             "name": "Search by file checksum",
@@ -434,7 +434,7 @@
           },
           "response": [
             {
-              "id": "b1c18d33-6881-4899-9c6d-d240d8bed175",
+              "id": "f53feff0-63de-48b0-b713-b806ec789df0",
               "name": "Files matching the SHA-256 checksum.",
               "originalRequest": {
                 "url": {
@@ -475,7 +475,7 @@
           }
         },
         {
-          "id": "ed1f0b67-bbda-4590-bdcf-dfe88e9204d9",
+          "id": "4351996d-95b7-4f9d-99e9-8cc2afbe036d",
           "name": "Search by ctag",
           "request": {
             "name": "Search by ctag",
@@ -503,7 +503,7 @@
           },
           "response": [
             {
-              "id": "00e3a189-12d7-4e08-a986-2071cfafd28b",
+              "id": "27fac04f-818e-467d-94df-0d6c130ce7b5",
               "name": "Source-tree entries matching the tag.",
               "originalRequest": {
                 "url": {
@@ -544,7 +544,7 @@
           }
         },
         {
-          "id": "512930cd-bf9f-4a29-b65c-daded5f4a368",
+          "id": "2bda53e4-63a3-4de2-ba7b-38e75e4186b8",
           "name": "Health check",
           "request": {
             "name": "Health check",
@@ -565,7 +565,7 @@
           },
           "response": [
             {
-              "id": "8990e9ef-a710-49b3-92f1-f21aa26ab8f1",
+              "id": "aced2e71-0946-45f0-8eec-e78b5b6bc0b6",
               "name": "OK",
               "originalRequest": {
                 "url": {
@@ -602,305 +602,22 @@
         }
       ],
       "event": []
-    },
-    {
-      "id": "85ce8c04-e3f6-4c39-8bec-2ee1a3c51969",
-      "name": "Copyright",
-      "description": {
-        "content": "",
-        "type": "text/plain"
-      },
-      "item": [
-        {
-          "id": "42906c78-0946-40f1-98b0-cfb7d315b3f7",
-          "name": "Look up copyright for a file checksum",
-          "request": {
-            "name": "Look up copyright for a file checksum",
-            "description": {},
-            "url": {
-              "path": [
-                "copyright",
-                "api",
-                "sha256",
-                ""
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": []
-            },
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "9ea6158e-c31c-4d64-a92b-fcc769e0bedb",
-              "name": "Copyright record for a file.",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "copyright",
-                    "api",
-                    "sha256",
-                    ""
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "method": "GET",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
-              "cookie": [],
-              "_postman_previewlanguage": "text"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "f4455f7a-a2db-4a98-82db-f93103f8b734",
-          "name": "Get copyright for a file path",
-          "request": {
-            "name": "Get copyright for a file path",
-            "description": {},
-            "url": {
-              "path": [
-                "copyright",
-                "api",
-                "file",
-                ":package",
-                ":version",
-                ":path"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "package",
-                  "description": "(Required) "
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "version",
-                  "description": "(Required) "
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "path",
-                  "description": "(Required) "
-                }
-              ]
-            },
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "f613737d-f919-4f20-ac6c-6a0d40fcc956",
-              "name": "Copyright record.",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "copyright",
-                    "api",
-                    "file",
-                    ":package",
-                    ":version",
-                    ":path"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "package",
-                      "description": "(Required) "
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "version",
-                      "description": "(Required) "
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "path",
-                      "description": "(Required) "
-                    }
-                  ]
-                },
-                "method": "GET",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
-              "cookie": [],
-              "_postman_previewlanguage": "text"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        }
-      ],
-      "event": []
-    },
-    {
-      "id": "b62c163a-6e11-4f5c-9c79-fe50357508d5",
-      "name": "Patches",
-      "description": {
-        "content": "",
-        "type": "text/plain"
-      },
-      "item": [
-        {
-          "id": "bbe4d7c1-ef4e-4a19-a5c8-915e9e5b15e2",
-          "name": "List Debian patches for a package",
-          "request": {
-            "name": "List Debian patches for a package",
-            "description": {},
-            "url": {
-              "path": [
-                "patches",
-                "api",
-                ":package",
-                ":version"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "package",
-                  "description": "(Required) "
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "version",
-                  "description": "(Required) "
-                }
-              ]
-            },
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "e438b60e-7d15-4657-84fd-c8d34ccb30c6",
-              "name": "Patches applied by Debian to upstream sources.",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "patches",
-                    "api",
-                    ":package",
-                    ":version"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "package",
-                      "description": "(Required) "
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "version",
-                      "description": "(Required) "
-                    }
-                  ]
-                },
-                "method": "GET",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
-              "cookie": [],
-              "_postman_previewlanguage": "text"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        }
-      ],
-      "event": []
     }
   ],
   "event": [],
   "variable": [
     {
       "type": "string",
-      "value": "https://sources.debian.org/api",
+      "value": "https://bugs.debian.org",
       "key": "baseUrl"
     }
   ],
   "info": {
-    "_postman_id": "04f6e89d-e262-4730-abcc-6cd02e821c6f",
-    "name": "Debian Sources API",
+    "_postman_id": "2e0bdd36-63f3-4cc0-bf46-9c43a8e3095b",
+    "name": "Debian Bug Tracking System Bugs Sources API",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "description": {
-      "content": "The Debian Sources API at sources.debian.org provides programmatic access to source code, metadata, copyright, and patch information for every package in Debian. All endpoints return JSON.",
+      "content": "The Debian BTS exposes per-bug machine-readable views via .mbox and structured URLs at bugs.debian.org. Bug reports can also be retrieved in JSON via various community endpoints. The historical SOAP API at bugs.debian.org/cgi-bin/soap.cgi is documented for reference.",
       "type": "text/plain"
     }
   }

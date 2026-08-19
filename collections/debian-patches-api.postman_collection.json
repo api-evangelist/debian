@@ -1,0 +1,123 @@
+{
+  "item": [
+    {
+      "id": "94d8ad38-641b-41fd-80e3-e583ac879350",
+      "name": "Patches",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "57b9078a-0c01-4e48-b920-b752daca4ea1",
+          "name": "List Debian patches for a package",
+          "request": {
+            "name": "List Debian patches for a package",
+            "description": {},
+            "url": {
+              "path": [
+                "patches",
+                "api",
+                ":package",
+                ":version"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "package",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "version",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a92af212-da7d-4c2b-9b9d-891ee95a24a4",
+              "name": "Patches applied by Debian to upstream sources.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "patches",
+                    "api",
+                    ":package",
+                    ":version"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "package",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "version",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://bugs.debian.org",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "74302c51-f418-4ef8-868e-394fd2c1b1f9",
+    "name": "Debian Bug Tracking System Bugs Patches API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Debian BTS exposes per-bug machine-readable views via .mbox and structured URLs at bugs.debian.org. Bug reports can also be retrieved in JSON via various community endpoints. The historical SOAP API at bugs.debian.org/cgi-bin/soap.cgi is documented for reference.",
+      "type": "text/plain"
+    }
+  }
+}
