@@ -27,7 +27,7 @@ tags:
   - Source Code
 created: '2025-01-01'
 modified: '2026-05-19'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 kind: opensource
 description: >-
   Debian is a free operating system distribution maintained by the Debian Project, a community of more than a thousand
