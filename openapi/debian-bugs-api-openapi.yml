@@ -1,11 +1,13 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Debian Bug Tracking System Bugs API
-  description: The Debian BTS exposes per-bug machine-readable views via .mbox and structured URLs at bugs.debian.org. Bug reports can also be retrieved in JSON via various community endpoints. The historical SOAP API at bugs.debian.org/cgi-bin/soap.cgi is documented for reference.
+  title: Debian Bugs API
   version: '1.0'
+  description: 'Operations tagged Bugs across 2 of this provider''s published API definitions: debian-bts-api-openapi.yml, debian-udd-api-openapi.yml. Each path carries the servers of the definition it was published in.'
 servers:
 - url: https://bugs.debian.org
   description: Debian Bug Tracking System
+- url: https://udd.debian.org
+  description: UDD web tools
 tags:
 - name: Bugs
 paths:
@@ -24,6 +26,9 @@ paths:
       responses:
         '200':
           description: HTML and structured views of a bug report.
+    servers:
+    - url: https://bugs.debian.org
+      description: Debian Bug Tracking System
   /cgi-bin/bugreport.cgi:
     get:
       summary: Bug report (mbox/text/HTML)
@@ -45,6 +50,9 @@ paths:
       responses:
         '200':
           description: Bug report in the requested format.
+    servers:
+    - url: https://bugs.debian.org
+      description: Debian Bug Tracking System
   /cgi-bin/pkgreport.cgi:
     get:
       summary: List bugs against a package
@@ -60,6 +68,9 @@ paths:
       responses:
         '200':
           description: List of bugs against the package.
+    servers:
+    - url: https://bugs.debian.org
+      description: Debian Bug Tracking System
   /bugs/:
     get:
       summary: Search Debian bugs (UDD)
@@ -69,3 +80,9 @@ paths:
       responses:
         '200':
           description: Multi-criteria search across Debian bug data.
+    servers:
+    - url: https://udd.debian.org
+      description: UDD web tools
+x-refined-from:
+- debian-bts-api-openapi.yml
+- debian-udd-api-openapi.yml

@@ -1,11 +1,11 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Debian Bug Tracking System Bugs Reproducibility API
-  description: The Debian BTS exposes per-bug machine-readable views via .mbox and structured URLs at bugs.debian.org. Bug reports can also be retrieved in JSON via various community endpoints. The historical SOAP API at bugs.debian.org/cgi-bin/soap.cgi is documented for reference.
+  title: Debian Ultimate Database (UDD) Web Tools Reproducibility API
+  description: The Ultimate Debian Database (UDD) gathers Debian package, bug, Lintian, popcon, and reproducibility data into a single SQL database. UDD exposes web tools and JSON exports (such as the bugs-search and maintainer dashboards) at udd.debian.org rather than a single formal REST API.
   version: '1.0'
 servers:
-- url: https://bugs.debian.org
-  description: Debian Bug Tracking System
+- url: https://udd.debian.org
+  description: UDD web tools
 tags:
 - name: Reproducibility
 paths:
