@@ -16,14 +16,12 @@
     "sourced from openapi/_original/ (2 archived document(s)); previously refined output at the top level was skipped rather than re-split",
     "debian-bts-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "debian-udd-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "tag 'Bugs' spans 2 source specs (debian-bts-api-openapi.yml, debian-udd-api-openapi.yml): per-path servers applied"
+    "tag 'Bugs' spans 2 source specs (debian-bts-api-openapi.yml, debian-udd-api-openapi.yml): per-path servers applied",
+    "apis.yml register: already-registered"
   ],
   "skipped": [
     "debian-bugs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "debian-copyright-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "debian-maintainers-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "debian-patches-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "debian-reproducibility-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "debian-sources-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+    "debian-reproducibility-api-openapi.yml: previously refined output, superseded by openapi/_original/"
   ]
 }
