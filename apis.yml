@@ -105,6 +105,9 @@ apis:
   - type: Documentation
     url: https://wiki.debian.org/UltimateDebianDatabase
 common:
+  - type: CapabilityMap
+    url: capabilities/debian-capability-edges.yml
+    name: Debian Business Capability Map
   - type: AgenticAccess
     url: agentic-access/debian-agentic-access.yml
   - type: VulnerabilityDisclosure

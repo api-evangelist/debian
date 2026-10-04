@@ -1,0 +1,26 @@
+slug: debian
+provider: Debian
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 1
+edges:
+- tag: Bugs
+  spec_file: debian-bugs-api-openapi.yml
+  capability_id: BC-4200.50
+  capability_id_l1: BC-4200
+  capability_name: Software Quality Engineering
+  confidence: 0.78
+  evidence: GET /{bugId} getBug View a bug report; GET /cgi-bin/pkgreport.cgi getPackageBugs List bugs
+    against a package; GET /bugs/ searchBugs Search Debian bugs (UDD)
+  reason: The operations expose the Debian Bug Tracking System — viewing, listing and searching software
+    defect reports against packages — which is defect management within software quality engineering.
+    Read-only reporting surface, hence 0.78 rather than higher.
