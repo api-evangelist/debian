@@ -105,6 +105,12 @@ apis:
   - type: Documentation
     url: https://wiki.debian.org/UltimateDebianDatabase
 common:
+  - type: Plans
+    url: plans/debian-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/debian-rate-limits.yml
+  - type: FinOps
+    url: finops/debian-finops.yml
   - type: CapabilityMap
     url: capabilities/debian-capability-edges.yml
     name: Debian Business Capability Map
