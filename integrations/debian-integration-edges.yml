@@ -16,8 +16,8 @@ edges:
   listing_count: 3
   apps:
   - Debian 13 "Trixie"
-  - Debian 12 "Bookworm"
   - Debian 11 "Bullseye"
+  - Debian 12 "Bookworm"
   seller_name: Debian
   detected_by: sweep-cloud-marketplaces.py
   detected: '2026-10-13'
